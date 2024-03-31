@@ -14,3 +14,14 @@ const addressWarn = document.getElementById('address-warn');
 cartBtn.addEventListener('click', function() {
     cartModal.style.display = 'flex';
 });
+
+// Fechar o modal quando clicar fora
+cartModal.addEventListener('click', function(e) {
+    if (e.target === cartModal) {
+        cartModal.style.display = 'none';
+    }
+});
+
+closeModalBtn.addEventListener('click', function() {
+    cartModal.style.display = 'none';
+});
